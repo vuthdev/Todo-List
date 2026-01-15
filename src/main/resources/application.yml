@@ -1,0 +1,26 @@
+spring:
+  application:
+    name: TodoList
+  jpa:
+    hibernate:
+      ddl-auto: update
+  datasource:
+    url: ${DB_URL}
+    username: ${DB_USERNAME}
+    password: ${DB_PASSWORD}
+
+logging:
+  level:
+    firestorm:
+      vuth:
+        todolist: DEBUG
+    org:
+      springframework:
+        security: DEBUG
+
+server:
+  port: 9090
+
+jwt:
+  secret: ${JWT_SECRET}
+  expires_in: ${JWT_EXPIRE}
